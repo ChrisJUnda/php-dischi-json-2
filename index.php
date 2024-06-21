@@ -1,7 +1,5 @@
 <!-- PHP -->
-<?php
-require __DIR__ . '/server.php';
-?>
+
 <!-- /PHP -->
 
 
@@ -23,8 +21,17 @@ require __DIR__ . '/server.php';
 </head>
 
 <body>
-    <div id="app">
-        <h1>{{title}}</h1>
+    <div id="app" v-cloak>
+        <header>
+            <h1>{{title}}</h1>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="card"></div>
+                </div>
+            </div>
+        </main>
     </div>
 
     <!-- Script vue js -->
@@ -32,13 +39,16 @@ require __DIR__ . '/server.php';
     <!-- /Script vue js -->
 
 
+    <!-- Script axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- /Script axios -->
+
+
     <!-- Script main js -->
     <script src="./main.js"></script>
     <!-- /Script main js -->
 
-    <!-- Script axios -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <!-- /Script axios -->
+
 </body>
 
 </html>
